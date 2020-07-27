@@ -1,0 +1,13 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.logo-name{
+  color: #333;
+  letter-spacing: 1.0px;
+  font-weight: 300;
+  font-size: 22px;
+  text-shadow: 0.3px 0.5px;
+}
