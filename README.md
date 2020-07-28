@@ -33,8 +33,8 @@ Após baixar ou realizar o clone do respositório, ele virá com a seguinte estr
         -.sequelizerc
         -package.json
     -frontend/
-        -public
-        -src
+        -public/
+        -src/
         -package.json
     -LICENSE
     -package.json
