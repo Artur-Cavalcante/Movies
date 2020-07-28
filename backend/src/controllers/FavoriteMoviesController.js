@@ -30,12 +30,9 @@ async function store(request, response) {
   if(id){
 
     let movie = await FavoriteMovie
-      .findAll({
-        where: {
-          id: id
-        }
-      })
+      .findByPk(id)
       .then((movieInfo) => {
+        console.log(movieInfo)
         return movieInfo;
       })
       .catch((err) => {
@@ -43,7 +40,7 @@ async function store(request, response) {
       });
 
     //Check if already not exist the movie in db 
-    if(!movie[0]){
+    if(!movie){
       FavoriteMovie
         .create({
           id: id, 
@@ -76,11 +73,7 @@ async function destroy(request, response) {
   if (id) {
     //Check if exist before destroy
     let movie = await FavoriteMovie
-      .findAll({
-        where: {
-          id: id
-        }
-      })
+      .findByPk(id)
       .then((movieInfo) => {
         return movieInfo;
       })
@@ -88,14 +81,15 @@ async function destroy(request, response) {
         console.log('Error FavoriteMoviesController.destroy', err)
       });
 
-    //If exist, destroy
-    if (movie[0]) {
-      await FavoriteMovie.destroy({
-        where: {
-          id: id
-        }
+      //If exist, destroy
+    if (movie) {
+      await movie.destroy()
+      .then(()=>{
+        return response.sendStatus(200);
+      }).catch((err)=>{
+        console.log(err)
+        return response.sendStatus(500);
       })
-      return response.sendStatus(200);
     } else {
       return response.sendStatus(404);
     }
