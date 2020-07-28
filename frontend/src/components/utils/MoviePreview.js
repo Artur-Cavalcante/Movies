@@ -66,18 +66,18 @@ function MoviePreview(props) {
     return (
         <section className="item-container" key={props.movie.id}>
             <div>
-                <Link to={"/details?id=" + props.movie.id} style={{ textDecoration: "none"}} >
+                <Link to={"/details?id=" + (props.movie.id ? props.movie.id : null ) } style={{ textDecoration: "none"}} >
                     <div className="img-container">
                         <img className="img-preview" src={handleImgPath()} alt='img' />
                     </div>
                     <div className="title-date-container">
-                        {props.movie.title} ({props.movie.release_date.split('-')[0]})
+                        {props.movie.title ? props.movie.title : null} ({props.movie.release_date ? props.movie.release_date.split('-')[0] : null})
                         {showEmptyStar ? <FaRegStar color="#d6a91a" size="1rem" className="star" /> : null}
                         {showFilledStar ? <FaStar color="#d6a91a" size="1rem" className="star" /> : null}
                     </div>
                 </Link>
                 <div className="rating-container">
-                    Rating: {props.movie.vote_average}
+                    {props.movie.vote_average ? 'Rating: ' + props.movie.vote_average : null}
                 </div>
             </div>
         </section>
