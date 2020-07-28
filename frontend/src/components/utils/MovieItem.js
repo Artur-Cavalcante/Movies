@@ -131,7 +131,7 @@ function MovieItem(props) {
     return (
         <section className="details-container" >
             <div className="background-details">
-                <div class="img-details-container">
+                <div className="img-details-container">
                     <img className="img-details" src={handleImgPath()} alt='img' />
                 </div>
                 <div className="info-container">
