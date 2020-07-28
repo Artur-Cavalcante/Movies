@@ -106,11 +106,24 @@
     letter-spacing: 0.3px;
 }
 
+.cast-container{
+
+}
+
 .writing,
 .directing,
 .production{
     font-size: 12px;
+    padding-right: 11px;
 }
+
+.directing-label,
+.writing-label,
+.production-label{
+    font-weight: 400;
+    padding-right: 2px;
+}
+
 
 /*medias*/
 
