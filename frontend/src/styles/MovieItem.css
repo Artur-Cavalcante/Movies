@@ -275,3 +275,11 @@
     }
 
 }
+
+@media (max-width: 680px){
+    .info-container{
+        overflow-y: scroll;
+
+    }
+
+}
