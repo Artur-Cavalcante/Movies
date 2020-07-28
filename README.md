@@ -64,10 +64,9 @@ Após o gerenciador de pacotes realizar o download das dependências, lance o co
 **2- Inicializar o Front-end**
 
 
-Com o back-end inicializado, volte para raiz do projeto, e entre na pasta 'frontend':
+Com o back-end inicializado, em outro terminal, volte para raiz do projeto e entre na pasta 'frontend':
 
 ```
-  $ cd ../
   $ cd frontend
 ```
 
