@@ -91,7 +91,6 @@ function MovieItem(props) {
         await favoriteApi()
             .post('/', movie)
             .then((response) => {
-                console.log(response.status);
                 setIsFavorite(true);
             })
             .catch((error) => {
@@ -105,7 +104,6 @@ function MovieItem(props) {
         await favoriteApi()
             .delete('?id=' + id)
             .then((response) => {
-                console.log(response.status);
                 setIsFavorite(false);
             })
             .catch((error) => {
