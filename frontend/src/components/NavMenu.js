@@ -27,7 +27,7 @@ function NavMenu(props) {
   const [inputText, setInputText] = useState("");
   const [route, setRoute] = useState("");
 
-  let FilmLogo = <FcFilmReel size="3.4rem"  />;
+  let FilmLogo = <FcFilmReel size="2.4rem"  />;
   let FavoriteIcon = <FaStar size={19} color="#d6a91a" style={{marginRight:2, marginBottom:2}}/>;
   let FilmsLogo = <FaFilm size={19} color="#48A072" style={{marginRight:2}} /> 
   let SearchIcon = <FaSearch size={19} />;
