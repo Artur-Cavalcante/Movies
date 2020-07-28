@@ -184,6 +184,19 @@
         letter-spacing: 0.3px;
     }
 
+    .writing,
+    .directing,
+    .production{
+        font-size: 14px;
+        padding-right: 11px;
+    }
+    
+    .directing-label,
+    .writing-label,
+    .production-label{
+        font-weight: 400;
+        padding-right: 2px;
+    }
     
 }
 
@@ -209,7 +222,7 @@
     
 
     .title-label{
-        font-size: 22px;
+        font-size: 23px;
         font-weight: 400;
         color: #333;
         letter-spacing: 0.5px;
@@ -226,13 +239,13 @@
     .description-container,
     .rating{
         padding-left: 2px;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: lighter;
         letter-spacing: 1px;
     }
 
     .overview-label{
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 400;
         color: #333;
         letter-spacing: 0.5px;
@@ -242,8 +255,23 @@
     }
 
     .overview{
-        font-size: 14px;
+        font-size: 15px;
         color: #444;
         letter-spacing: 0.3px;
     }
+
+    .writing,
+    .directing,
+    .production{
+        font-size: 14px;
+        padding-right: 11px;
+    }
+    
+    .directing-label,
+    .writing-label,
+    .production-label{
+        font-weight: 400;
+        padding-right: 2px;
+    }
+
 }
