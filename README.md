@@ -1,4 +1,4 @@
-# Simplificauto Movies
+# Simplificauto Movies 
 
 <div >
     <img src="https://img.shields.io/badge/React-v16.13.1-blue?style=flat"/>
@@ -28,7 +28,14 @@ Para rodar este projeto é necessário que tenha instalado o [Node.js](https://n
 Após baixar ou realizar o clone do respositório, ele virá com a seguinte estrutura:
 
     -backend/
+        -database/
+        -src/
+        -.sequelizerc
+        -package.json
     -frontend/
+        -public
+        -src
+        -package.json
     -LICENSE
     -package.json
     -README.md
@@ -47,7 +54,7 @@ E lance o comando para instalar as dependência do backend:
   $ npm install
 ```
 
-Após realizar o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o back-end:
+Após o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o back-end:
 
 ```
   $ npm run start
@@ -57,7 +64,7 @@ Após realizar o gerenciador de pacotes realizar o download das dependências, l
 **2- Inicializar o Front-end**
 
 
-No terminal estando na raiz do projeto, entre na pasta 'frontend':
+Com o back-end inicializado, em outro terminal, volte para raiz do projeto e entre na pasta 'frontend':
 
 ```
   $ cd frontend
@@ -70,7 +77,7 @@ E lance o comando para instalar as dependência do frontend:
 ```
 
 
-Após realizar o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o fron-tend:
+Com as dependências instaladas, execute o comando para inicializar o front-end:
 
 ```
   $ npm run start
