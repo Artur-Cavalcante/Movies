@@ -34,8 +34,8 @@ function Movies() {
 
                 setMovies(response.data.results);
                 setShowSpinner(false);
-                setShowPaginator(true);
                 setShowMovies(true);
+                setShowPaginator(true);
             })
             .catch((err) => {
                 console.log(err)
