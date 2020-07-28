@@ -38,13 +38,13 @@ function MovieItem(props) {
 
                 for (let index = 0; index < response.data.crew.length; index++) {
                     const cast = response.data.crew[index];
-                    if (cast.department === 'Writing') {
+                    if ((!Writing) && cast.department === 'Writing') {
                         Writing = cast.name
                     }
-                    if (cast.department === 'Directing') {
+                    if ((!Directing) && cast.department === 'Directing') {
                         Directing = cast.name
                     }
-                    if (cast.department === 'Production') {
+                    if ((!Production) && cast.department === 'Production') {
                         Production = cast.name
                     }
 
@@ -155,7 +155,7 @@ function MovieItem(props) {
                                     {props.details.original_language ? props.details.original_language : null}
                                 </span>
                                 <p className="rating">
-                                    {props.details.vote_average ? 'Rating:' + props.details.vote_average : null}
+                                    {props.details.vote_average ? 'Rating:' + ' ' + props.details.vote_average : null}
                                 </p>
                             </p>
                         </div>
