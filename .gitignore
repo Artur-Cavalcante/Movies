@@ -1,3 +1,6 @@
+# Db sqlite
+FavoriteMovies.db
+
 # Logs
 logs
 *.log
