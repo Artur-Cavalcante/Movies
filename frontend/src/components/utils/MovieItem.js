@@ -20,40 +20,40 @@ function MovieItem(props) {
 
     const [crew, setCrew] = useState({});
 
-    function handleImgPath(){
-        if(props.details.poster_path){
+    function handleImgPath() {
+        if (props.details.poster_path) {
             return "https://image.tmdb.org/t/p/w500" + props.details.poster_path;
-        }else{
+        } else {
             return imgNotFound;
         }
     }
 
-    async function getCast(id){
+    async function getCast(id) {
         await castMovieApi(id)
-                .get()
-                .then((response)=>{
-                    let Writing = "";
-                    let Directing = "";
-                    let Production = "";
+            .get()
+            .then((response) => {
+                let Writing = "";
+                let Directing = "";
+                let Production = "";
 
-                    for (let index = 0; index < response.data.crew.length; index++) {
-                        const cast = response.data.crew[index];
-                        if(cast.department === 'Writing'){
-                            Writing = cast.name
-                        }
-                        if(cast.department === 'Directing'){
-                            Directing = cast.name                            
-                        }
-                        if(cast.department === 'Production'){
-                            Production = cast.name                            
-                        }
-
+                for (let index = 0; index < response.data.crew.length; index++) {
+                    const cast = response.data.crew[index];
+                    if (cast.department === 'Writing') {
+                        Writing = cast.name
                     }
-                    setCrew({'Writing': Writing, 'Directing': Directing, 'Production': Production});
-                })
-                .catch((err)=>{
-                    console.log(err)
-                })
+                    if (cast.department === 'Directing') {
+                        Directing = cast.name
+                    }
+                    if (cast.department === 'Production') {
+                        Production = cast.name
+                    }
+
+                }
+                setCrew({ 'Writing': Writing, 'Directing': Directing, 'Production': Production });
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
     function checkIsFavorite(movies, id) {
@@ -79,10 +79,10 @@ function MovieItem(props) {
             });
     }
 
-    function handleFavorite(star){
-        if(star === "empty"){
+    function handleFavorite(star) {
+        if (star === "empty") {
             saveFavorite(props.details);
-        }else{
+        } else {
             removeFavorite(props.details.id);
         }
     }
@@ -143,13 +143,13 @@ function MovieItem(props) {
                                 {props.details.title ? props.details.title : null}
                             </label>
                             <span className="date-label">
-                                {props.details.release_date ? 
+                                {props.details.release_date ?
                                     '(' + props.details.release_date.split("-")[0] + ')'
-                                : null}
+                                    : null}
                             </span>
 
                             <p className="description-container">
-                                {props.details.genres[0] ? props.details.genres[0].name + ' - ' : null} 
+                                {props.details.genres[0] ? props.details.genres[0].name + ' - ' : null}
                                 {props.details.runtime ? props.details.runtime + 'min -' : null}
                                 <span className="language">
                                     {props.details.original_language ? props.details.original_language : null}
@@ -161,8 +161,8 @@ function MovieItem(props) {
                         </div>
 
                         <div className="star-container">
-                            {showEmptyStar ? <FaRegStar color="#d6a91a" size="3.5rem" onClick={() => handleFavorite("empty")} style={{cursor: "pointer"}} className="item-star" /> : null}
-                            {showFilledStar ? <FaStar color="#d6a91a" size="3.5rem" onClick={() => handleFavorite("filled")} style={{cursor: "pointer"}}  className="item-star" /> : null}
+                            {showEmptyStar ? <FaRegStar color="#d6a91a" size="3.5rem" onClick={() => handleFavorite("empty")} style={{ cursor: "pointer" }} className="item-star" /> : null}
+                            {showFilledStar ? <FaStar color="#d6a91a" size="3.5rem" onClick={() => handleFavorite("filled")} style={{ cursor: "pointer" }} className="item-star" /> : null}
                         </div>
                     </div>
                     <div className="overview-container">
@@ -173,14 +173,17 @@ function MovieItem(props) {
                     </div>
                     <div className="cast-container">
                         <label className="directing">
-                            {crew.Directing ? 'Directing: ' + crew.Directing + ' | ' : null}
+                            <label className="directing-label">{crew.Directing ? 'Directing:' : null}</label>
+                            {crew.Directing ? crew.Directing : null}
                         </label>
                         <label className="writing">
-                            {crew.Writing ? '|  Writing: ' + crew.Writing + ' | ': null}
+                            <label className="writing-label">{crew.Writing ? 'Writing:' : null}</label>
+                            {crew.Writing ? crew.Writing : null}
 
                         </label>
                         <label className="production">
-                            {crew.Production ? '| Production: ' + crew.Production : null}
+                            <label className="production-label">{crew.Production ? 'Production:' : null}</label>
+                            {crew.Production ? crew.Production : null}
                         </label>
                     </div>
                 </div>
