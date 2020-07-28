@@ -47,24 +47,12 @@ E lance o comando para instalar as dependência do backend:
   $ npm install
 ```
 
-ou 
-
-```
-  $ yarn
-```
-
-
 Após realizar o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o back-end:
 
 ```
   $ npm run start
 ```
 
-ou 
-
-```
-  $ yarn start
-```
 
 **2- Inicializar o Front-end**
 
@@ -81,25 +69,12 @@ E lance o comando para instalar as dependência do frontend:
   $ npm install
 ```
 
-ou 
-
-```
-  $ yarn
-```
-
 
 Após realizar o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o fron-tend:
 
 ```
   $ npm run start
 ```
-
-ou 
-
-```
-  $ yarn start
-```
-
 
 ##### Após inicializar o back-end ele estará rodando na porta **3333**, e o front-end irá rodar na porta padrão do React **3000**. A partir dai, é possível acessar a aplicação pelo browser através do endereço `http://localhost:3000/` ou  `http://127.0.0.1:3000/`
 
