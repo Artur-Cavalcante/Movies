@@ -16,7 +16,7 @@
 
 
 .img-preview:hover{
-    box-shadow: 2px 2px #fff; 
+    box-shadow: 1px 1px #444; 
     transition: 5ms;
 }
 
