@@ -28,7 +28,14 @@ Para rodar este projeto é necessário que tenha instalado o [Node.js](https://n
 Após baixar ou realizar o clone do respositório, ele virá com a seguinte estrutura:
 
     -backend/
+        -database/
+        -src/
+        -.sequelizerc
+        -package.json
     -frontend/
+        -public
+        -src
+        -package.json
     -LICENSE
     -package.json
     -README.md
