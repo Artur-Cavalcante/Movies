@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <NavMenu getSearchText={getSearchText} toggleSearch={toggleSearch}/>
-      <Container fluid={true}>
+      <Container>
         <Route exact path="/" component={Movies}/>
         <Route path="/search" component={() => SearchMovie(searchText, bindSearch, toggleSearch)}/>
         <Route path="/favorite" component={FavoriteMovie}/>
