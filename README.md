@@ -54,7 +54,7 @@ E lance o comando para instalar as dependência do backend:
   $ npm install
 ```
 
-Após realizar o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o back-end:
+Após o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o back-end:
 
 ```
   $ npm run start
@@ -64,9 +64,10 @@ Após realizar o gerenciador de pacotes realizar o download das dependências, l
 **2- Inicializar o Front-end**
 
 
-No terminal estando na raiz do projeto, entre na pasta 'frontend':
+Com o back-end inicializado, volte para raiz do projeto, e entre na pasta 'frontend':
 
 ```
+  $ cd ../
   $ cd frontend
 ```
 
@@ -77,7 +78,7 @@ E lance o comando para instalar as dependência do frontend:
 ```
 
 
-Após realizar o gerenciador de pacotes realizar o download das dependências, lance o comando para inicializar o fron-tend:
+Com as dependências instaladas, execute o comando para inicializar o front-end:
 
 ```
   $ npm run start
