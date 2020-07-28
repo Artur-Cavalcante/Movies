@@ -29,7 +29,6 @@ function SearchMovie(searchText, bindSearch, toggleSearch) {
         await searchApi(searchText, page)
             .get()
             .then((response) => {
-                console.log(searchText)
                 setPages(response.data.total_pages);
                 setCurrentPage(response.data.page);
                 setMovies(response.data.results);
