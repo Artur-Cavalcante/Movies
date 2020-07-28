@@ -282,4 +282,22 @@
 
     }
 
+    .img-details{
+        width: auto;
+        height: 12rem;
+    
+        border-radius: 6px 0px 0px 6px;
+        box-shadow: #ccc 1px 1px;
+    }
+
+
+    .details-container{
+        height: 12rem;
+        width: auto;
+        
+        margin: 0;
+        padding: 0;
+    
+        margin-top: 25px;
+    }
 }
