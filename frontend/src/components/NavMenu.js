@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import {
   Collapse,
   Container,
@@ -25,6 +25,7 @@ import '../styles/NavMenu.css';
 function NavMenu(props) {
   const [collapsed, setCollapsed] = useState(true);
   const [inputText, setInputText] = useState("");
+  const [route, setRoute] = useState("");
 
   let FilmLogo = <FcFilmReel size="3.4rem"  />;
   let FavoriteIcon = <FaStar size={19} color="#d6a91a" style={{marginRight:2, marginBottom:2}}/>;
@@ -34,6 +35,14 @@ function NavMenu(props) {
   function toggleNavbar() {
     setCollapsed(!collapsed);
   };
+
+  function handleEnterKey(event){
+    if(event.key === 'Enter'){
+      props.toggleSearch(true);
+      props.getSearchText(inputText);
+      setRoute(<Redirect push to="/search" />)
+    };
+  }
 
   return (
     <header>
@@ -60,7 +69,9 @@ function NavMenu(props) {
                     placeholder="Search Movie" 
                     onChange={(e) => {
                       setInputText(e.target.value);
-                    } }/>
+                    } }
+                    onKeyPress={handleEnterKey}
+                  />
                 </div>
                 <NavLink  
                   to="/search"
@@ -72,7 +83,7 @@ function NavMenu(props) {
                   style={{ display: "inline-block", width:"5%", paddingLeft:7 }} tag={Link} 
                 >
                   {SearchIcon}
-                  </NavLink>
+                </NavLink>
               </div>
               <NavLink tag={Link} className="text-dark mr-3 mt-2" to="/">
                 {FilmsLogo}
@@ -90,6 +101,7 @@ function NavMenu(props) {
           </Collapse>
         </Container>
       </Navbar>
+      {route}
     </header>
   );
 };
