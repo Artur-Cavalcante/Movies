@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "frontend to Simplificauto's test",
+  "description": "frontend to Movies's Website,
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
