@@ -9,7 +9,7 @@
 
 </div>
 
-> Este repositório contém a solução para o teste da Simplificauto.
+> Um formidoso site de filmes.
 
 
 
