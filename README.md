@@ -1,4 +1,4 @@
-# Simplificauto Movies 
+# Movies 
 
 <div >
     <img src="https://img.shields.io/badge/React-v16.13.1-blue?style=flat"/>
